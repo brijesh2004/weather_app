@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search_div">
+        <input type="text" id="search_input" placeholder="Search with city name or Zip code">
+        <button id="search_btn" onclick="getWeather()">Get Weather</button>
+    </div>
+     <select  id="select_degree" onchange="changetheTemp()">
+        <option value="celsius">celsius</option>
+        <option value="fahrenheit">fahrenheit</option>
+     </select>
+    <div id="weather_details">
+        <div id="inside_weather">
+            <h1>Country :  <span id="country_name"> Gorakhpur</span> </h1>
+        <h1>City :  <span id="city_name"> Gorakhpur</span> </h1>
+        <p>Date : <span id="today_date">27/09/2023</span></p>
+        <p>Day  : <span id="today_day"> Thursday</span></p>
+        <p>Temperature: <span id="temperatur">23 °C</span></p>
+        <p>Min Temp: <span id="min_temp">24 °C</span></p>
+        <p>Max Temp: <span id="max_temp">24 °C</span></p>
+        <p>humidity: <span id="humidity">59</span>g/kg</p>
+        <p>Wind Speed: <span id="speed">2 </span>km/h</p>
+        <p>Description: <span id="description">clar</span></p>
+    </div>
+    </div>
+
+    <h1 id="error"></h1>
+    <script src="scrip.js"></script>
+</body>
+</html>
