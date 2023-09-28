@@ -9,6 +9,7 @@ let search_btn = document.getElementById("search_btn");
 let country_name = document.getElementById("country_name");
 let description = document.getElementById("description");
 let today_date = document.getElementById("today_date");
+var Days = ['Sunday', 'Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let today_day = document.getElementById("today_date");
 let city;
 const getWeather = async ()=>{
@@ -36,6 +37,14 @@ const getWeather = async ()=>{
        speed.innerHTML=data.wind.speed;
        inside_weather.style.display="block";
        search_btn.innerHTML="Get Weather";
+
+       let currentDay = new Date();
+
+       today_day.innerHTML=Days[currentDay.getDay()];
+       let date = currentDay.getDate();
+       let month = currentDay.getMonth()+1;
+       let year = currentDay.getFullYear();
+       today_date.innerHTML = `${date}/${month}/${year}`;
        description.innerHTML=data.weather[0].description;
        let erro = document.getElementById('error');
        erro.innerHTML="";
